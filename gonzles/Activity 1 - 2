@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body> 
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<h1 style="text-align: center">CALCULATOR</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-3"></div>
+		<div class="col-sm-6">
+			<form>
+				<div class="form-group">
+					<label style="color: red"><b
+						>Value1</b></label>
+					<input type="text" class="form-control" id="Value1">
+				</div>
+				<div class="form-group">
+					<label style="color: blue "><b>Value2</b>:</label>
+					<input type="text" class="form-control" id="Value2">
+				</div>
+				<center>
+					<div>
+						<input type="button" id="str" class="btn btn-warning" value="Add" onclick="add()">
+					</div>
+					<div>
+						<input type="button" id="num" class="btn btn-danger" value="Subtract" onclick="subtract()">
+					</div>
+					<div>
+						<input type="button" id="num" class="btn btn-success" value="Multiply" onclick="multiply()">
+					</div>
+					<div>
+						<input type="button" id="num" class="btn btn-primary" value="Divide" onclick="divide()">
+					</div>
+				</center>
+			</form> <br><br>
+			<h3>The answer is: </h3> <h3 id="answer"></h3>
+		</div>
+		<div class="col-sm-3">
+	</div>
+</div>
+<script type="text/javascript">
+	function add()
+{
+var Value1=document.getElementById("Value1").value
+var Value2=document.getElementById("Value2").value
+Value1=Number(Value1);
+Value2=Number(Value2);
+var total=Value1+Value2;
+document.getElementById('answer').innerHTML=total;
+if (isNaN(Value1)== false && isNaN(Value2) == false)
+{
+  var sum = Value1 + Value2;
+
+}
+else
+{
+  alert('Incorrect')
+}
+}
+
+	function subtract()
+{
+var Value1=document.getElementById("Value1").value
+var Value2=document.getElementById("Value2").value
+Value1=Number(Value1);
+Value2=Number(Value2);
+var total=Value1-Value2;
+document.getElementById("answer").innerHTML=total;
+if (isNaN(Value1)== false && isNaN(Value2) == false)
+{
+  var sum = Value1 + Value2;
+
+}
+else
+{
+  alert('Incorrect')
+}
+
+
+}
+	function multiply()
+{
+var Value1=document.getElementById("Value1").value
+var Value2=document.getElementById("Value2").value
+Value1=Number(Value1);
+Value2=Number(Value2);
+var total=Value1*Value2;
+document.getElementById("answer").innerHTML=total;
+if (isNaN(Value1)== false && isNaN(Value2) == false)
+{
+  var sum = Value1 + Value2;
+
+}
+else
+{
+  alert('Incorrect')
+}
+
+}
+	function divide()
+{
+var Value1=document.getElementById("Value1").value
+var Value2=document.getElementById("Value2").value
+Value1=Number(Value1);
+Value2=Number(Value2);
+var total=Value1/Value2;
+document.getElementById("answer").innerHTML=total;
+if (isNaN(Value1)== false && isNaN(Value2) == false)
+{
+  var sum = Value1 + Value2;
+
+}
+else
+{
+  alert('Incorrect')
+}
+
+
+}
+</script>
+</body>
+</html>

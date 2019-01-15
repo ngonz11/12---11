@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<title>Javascript Activity 3 - [Albert Villarubia]</title>
+</head>
+<body>
+	<div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<h1>LAB Exercise 3</h1>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
+	<div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<h1>Enter you pera padala</h1>
+			<h1> id="pay">Please Pay</h1>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
+	<div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<center>
+				<input type="" name="" id="age">
+				<input type="button" value="IDENTIFY" name="" onclick="display()">
+			</center>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
+	<div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<h3 style="text-align: center">Your age Bracket is </h3> <h3 id="result" style="text-align: center"></h3>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
+	
+
+
+<script type="text/javascript">
+	function display()
+	{
+		var agevalue=Number(document.getElementById('age').value);
+		var category="";
+		if(isNaN(agevalue)==false)
+		{
+			if (agevalue>99 && agevalue<201)
+			{
+				category="Interest Rate is 2"
+			}
+			else if (agevalue>200 && agevalue<501)
+			{
+				category="Interest Rate is 3"
+			}
+			else if (agevalue>500 && agevalue<1001)
+			{
+				category="Interest Rate is 4"
+			}
+			else if (agevalue>1000 && agevalue<2001)
+			{
+				category="Interest Rate is 10"
+			}
+			else if (agevalue>2000 && agevalue<5001)
+			{
+				category="Interest Rate is 20"
+			}
+			else if (agevalue>5000 && agevalue<10001)
+			{
+				category="50"
+			}
+			else
+			{
+				category="Thanks";
+			}
+			document.getElementById('result').innerHTML=category;
+			var num2=Number(agevalue);
+			var payment=category+num2;
+			document.getElementById('pay').innerHTML=payment;
+
+		}
+		else
+		{
+			alert("Its not a number")
+		}
+	}
+</script>
+</body>
+</html>

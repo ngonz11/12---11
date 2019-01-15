@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<section>
+
+		<div class="row">
+			<div class="col-sm-12">
+				<center>
+					<span>RC COLA</span>
+				</center>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-12">
+				<center>
+					<span>Amount: <input type="text" id="value"></span>
+				</center>
+			</div>
+		</div> <br><br>
+
+		<div class="row">
+			<div class="col-sm-4">
+				<center>
+					<input type="button" class="btn btn-danger button1" value="350ml" onclick="first()">
+				</center>
+			</div>
+			<div class="col-sm-4">
+				<center>
+					<input type="button" class="btn btn-danger button1" value="450ml" onclick="second()">
+				</center>
+			</div>
+			<div class="col-sm-4">
+				<center>
+					<input type="button" class="btn btn-danger button1" value="750ml" onclick="third()">
+				</center>
+			</div>
+		</div><br><br>
+
+		<div class="row">
+			<div class="col-sm-12">
+				<center>
+					<h3 id="change">Result</h3>
+				</center>
+			</div>
+		</div>
+
+		<div class="wave"></div>
+
+	</section>
+
+	<script type="text/javascript">
+		function first()
+{
+	var k=document.getElementById('value').value;
+	k=Number(k);
+	if ((k>=25)==true)
+	{
+		var b=k-25;
+		document.getElementById('change').innerHTML="Thanks, your change is "+b;
+		alert('enjoy your coke')
+	}
+	else
+	{
+		var b=25-k;
+		alert('Your amount is not sufficient');
+		document.getElementById('change').innerHTML="Your EMoney need"+b+" more to have one";
+	}
+}
+function second()
+{
+	var k=document.getElementById('value').value;
+	k=Number(k);
+	if ((k>=30)==true)
+	{
+		var b=k-30;
+		document.getElementById('change').innerHTML="Thanks, your change is "+b;
+		alert('enjoy your coke')
+	}
+	else
+	{
+		var b=30-k;
+		alert('Your amount is not sufficient');
+		document.getElementById('change').innerHTML="Your EMoney need"+b+" more to have one";
+	}
+}
+function third()
+{
+	var k=document.getElementById('value').value;
+	k=Number(k);
+	if ((k>=50)==true)
+	{
+		var b=k-50;
+		document.getElementById('change').innerHTML="Thanks, your change is "+b;
+		alert('enjoy your coke')
+	}
+	else
+	{
+		var b=50-k;
+		alert('Your amount is not sufficient');
+		document.getElementById('change').innerHTML="Your EMoney need"+b+" more to have one";
+	}
+}
+	</script>
+</body>
+</html>
